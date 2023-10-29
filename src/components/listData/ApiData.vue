@@ -8,9 +8,7 @@
       {{ item.title }}
     </span>
     <div class="icons">
-      <span @click="editMemberText">
-        <img alt="Vue logo" src="@/assets/edit.svg" />
-      </span>
+      <EditColumn />
       <DeleteElement @remove-item="removeItem" :item="item" />
     </div>
 </div>
@@ -22,7 +20,7 @@ import { ref } from "vue";
 import { v4 as uuidv4 } from "uuid";
 import { data } from "@/data";
 import DeleteElement from "@/components/deleteElements/DeleteElement.vue";
-// import EditColumn from "@/components/editColumn/EditColumn.vue";
+import EditColumn from "@/components/editColumn/EditColumn.vue";
 
 const text = ref("");
 const list = ref(data);
