@@ -1,15 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <ApiData />
+  <GetData />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ApiData from "@/components/listData/ApiData.vue";
+import GetData from "@/apiLists/GetData.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ApiData,
+    GetData,
+  },
+  props: {
+    item: Object
   }
 }
 </script>
